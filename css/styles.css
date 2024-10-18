@@ -26,4 +26,10 @@ main > button {
   margin-top: 16px;
   padding: 8px 0;
   color: white;
+  cursor: pointer;
+}
+
+button.active {
+  background: lightgray;
+  color: black;
 }

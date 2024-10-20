@@ -8,7 +8,13 @@
       clearInterval(intervalId);
       countdown = 3 * 1000;
     }
-    timer.textContent = countdown;
+
+    const totalSeconds  = Math.floor(countdown / 1000);
+
+    const minutes = Math.floor(totalSeconds/60);
+    const seconds = totalSeconds % 60;
+
+    timer.textContent = `${minutes}:${seconds}`;
   }
 
   const timer = document.getElementById('timer');

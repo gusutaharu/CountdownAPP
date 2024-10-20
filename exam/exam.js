@@ -2,14 +2,22 @@
 
 {
   function check() {
+    let countdown = endTime - new Date().getTime();
 
+    if (countdown < 0){
+      clearInterval(intervalId);
+      countdown = 3 * 1000;
+    }
+    timer.textContent = countdown;
   }
 
   const timer = document.getElementById('timer');
   const btn = document.getElementById('btn');
+  let endTime;
+  let intervalId;
 
   btn.addEventListener('click', ()=>{
-    const endTime = new Date().getTime() + 3 * 1000;
-    setInterval(check, 100);
+    endTime = new Date().getTime() + 3 * 1000;
+    intervalId = setInterval(check, 100);
   });
 }

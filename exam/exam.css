@@ -19,3 +19,13 @@ p {
   font-size: 40px;
   font-family: 'Courier New';
 }
+
+button {
+  all: unset;
+  width: 100%;
+  background: #08c;
+  color: #fff;
+  font-weight: bold;
+  padding: 16px 0;
+  margin-top: 16px;
+}
